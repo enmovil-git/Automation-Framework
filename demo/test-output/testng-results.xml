@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-12T17:49:47 IST" name="Default suite" finished-at="2024-02-12T17:49:59 IST" duration-ms="12031">
+    <groups>
+    </groups>
+    <test started-at="2024-02-12T17:49:47 IST" name="Default test" finished-at="2024-02-12T17:49:59 IST" duration-ms="12031">
+      <class name="com.poc.atf.testscripts.LoginPageTestScripts">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:[LoginPageTestScripts passed=0 failed=0 skipped=0]]" started-at="2024-02-12T17:49:47 IST" name="startReport" finished-at="2024-02-12T17:49:47 IST" duration-ms="218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method is-config="true" signature="init()[pri:0, instance:[LoginPageTestScripts passed=0 failed=0 skipped=0]]" started-at="2024-02-12T17:49:47 IST" name="init" finished-at="2024-02-12T17:49:50 IST" duration-ms="2401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="logIN()[pri:0, instance:[LoginPageTestScripts passed=0 failed=0 skipped=0]]" started-at="2024-02-12T17:49:50 IST" name="logIN" description="Open Daimler Application" finished-at="2024-02-12T17:49:59 IST" duration-ms="9585" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logIN -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:[LoginPageTestScripts passed=0 failed=0 skipped=0]]" started-at="2024-02-12T17:49:59 IST" name="getResult" finished-at="2024-02-12T17:49:59 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=logIN on [LoginPageTestScripts passed=0 failed=0 skipped=0] status=SUCCESS method=LoginPageTestScripts.logIN()[pri:0, instance:[LoginPageTestScripts passed=0 failed=0 skipped=0]] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:[LoginPageTestScripts passed=0 failed=0 skipped=0]]" started-at="2024-02-12T17:49:59 IST" name="endReport" finished-at="2024-02-12T17:50:00 IST" duration-ms="543" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- com.poc.atf.testscripts.LoginPageTestScripts -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

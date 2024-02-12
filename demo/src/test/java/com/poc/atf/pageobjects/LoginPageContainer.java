@@ -5,10 +5,10 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPageContainer {
 	
-	@FindBy(xpath = "//button[text()='Sign in']")
+	@FindBy(xpath = "//button[text()='LOGIN']")
 	private WebElement loginButton;
 	
-	@FindBy(xpath = "//input[@name='username']")
+	@FindBy(xpath = "//input[@name='email']")
 	private WebElement pocUsername;
 	
 	@FindBy(xpath = "//input[@name='password']")
