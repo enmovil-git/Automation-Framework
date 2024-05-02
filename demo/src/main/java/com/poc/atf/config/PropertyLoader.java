@@ -22,8 +22,8 @@ public class PropertyLoader {
 		return RESOURCE_BUNDLE.getString("browserFirefoxPath");
 	}
 	
-	public static String getALUrl() {
-		return RESOURCE_BUNDLE.getString("alQaUrl");
+	public static String getDBPLUrl() {
+		return RESOURCE_BUNDLE.getString("DbplQaUrl");
 	}
 	
 	public static String getLoginData() {

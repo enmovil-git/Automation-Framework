@@ -41,6 +41,7 @@ public class BrowserDriver {
 		}
 		return bDriver;
 	}
+	
 
 	public static WebDriver getCurrentDriver() {
 		return getCurrentDriver(PropertyLoader.getBrowser());
@@ -96,8 +97,35 @@ public class BrowserDriver {
 	
 	public static void scrollDown() {
 		JavascriptExecutor js = (JavascriptExecutor) getCurrentDriver();
-		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+		js.executeScript("window.scrollBy(0, 400)");
 	}
+	
+	public static void fullScrollDown() {
+		JavascriptExecutor js = (JavascriptExecutor) getCurrentDriver();
+		js.executeScript("window.scrollBy(0, 1000)");
+	}
+	
+	public static void scrollUp() {
+	    JavascriptExecutor js = (JavascriptExecutor) getCurrentDriver();
+	    js.executeScript("window.scrollBy(0, -400)");
+	}
+	
+	public static void fUllScrollUp() {
+	    JavascriptExecutor js = (JavascriptExecutor) getCurrentDriver();
+	    js.executeScript("window.scrollBy(0, -1000)");
+	}
+     
+	public static void scrollAndClick(WebElement webElement){
+	    Actions action = new Actions(BrowserDriver.getCurrentDriver());
+	    WebElement test = webElement;
+	    action.moveToElement(test).click().build().perform();
+	}
+	
+	public static void calendarScrollTop() {
+	JavascriptExecutor js = (JavascriptExecutor) bDriver;
+	js.executeScript("var scrollbar = document.querySelector('.xdsoft_scrollbar'); scrollbar.scrollTop -= 50;");
+	}
+	
 	
 	public static void scrollHorizontal() {
 		//JavascriptExecutor js = (JavascriptExecutor) getCurrentDriver();
@@ -229,4 +257,15 @@ public class BrowserDriver {
         move.release();
         move.perform();
 	}
+	
+	public static void scrollSliderUp(Integer waitTimeInSeconds) {
+        
+        WebElement mySliderElement = (new WebDriverWait(getCurrentDriver(), Duration.ofSeconds(waitTimeInSeconds)))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='slide-r-body'])[2]")));
+        Actions actions = new Actions(getCurrentDriver());
+        actions.moveToElement(mySliderElement)
+               .moveByOffset(0, 100)
+               .perform();
+    }
+	
 }

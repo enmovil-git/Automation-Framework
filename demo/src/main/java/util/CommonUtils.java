@@ -23,8 +23,8 @@ public class CommonUtils {
 	
 	public static String generateLicenseNumber() {
 		String randomStr = RandomStringUtils.random(14, false, true);
-    	String fistr = RandomStringUtils.random(2, true, false).toUpperCase();
-    	String result = fistr + randomStr;
+    	String first = RandomStringUtils.random(2, true, false).toUpperCase();
+    	String result = first + randomStr;
     	return result;
 	}
 	
