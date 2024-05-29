@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test Management Regression suite">
+  <test name=" Test Cases" verbose="2">
+    <classes>
+			<class name="org.enmovil.atfwebui.testscripts.LoginPageTestScript"></class>
+			
+		</classes>
+  </test>
+</suite>

@@ -98,13 +98,25 @@ public class BrowserDriver {
 		JavascriptExecutor js = (JavascriptExecutor) getCurrentDriver();
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 	}
+	 public static void scrollHorizontallyBy(int pixels) {
+	        JavascriptExecutor js = (JavascriptExecutor) getCurrentDriver();
+	        String script = String.format("window.scrollBy(%d, 0)", pixels);
+	        js.executeScript(script);
+	    }
+
+	
+	
+	public static void scrollUp() {
+		JavascriptExecutor js = (JavascriptExecutor) getCurrentDriver();
+		js.executeScript("window.scrollBy(0,-document.body.scrollHeight)");
+	}
 	
 	public static void scrollHorizontal() {
 		//JavascriptExecutor js = (JavascriptExecutor) getCurrentDriver();
 		//js.executeScript("arguments[0].scrollIntoView(true);", element);
 		//js.executeScript("document.getElementById('gvLocationHorizontalRail').scrollLeft += 250", "");
 		Actions actions = new Actions(getCurrentDriver());
-		actions.scrollByAmount(5000, 0).perform();
+		actions.scrollByAmount(2000, 0).perform();
 	}
 	
 	public static void doubleClick(WebElement webElement) {
@@ -229,4 +241,18 @@ public class BrowserDriver {
         move.release();
         move.perform();
 	}
-}
+	public static void highlightElement(WebElement element) {
+	    try {
+	        JavascriptExecutor js = (JavascriptExecutor) getCurrentDriver();
+	        js.executeScript("arguments[0].setAttribute('style', 'border: 4px solid pink;');", element);
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	}
+	    public static void slowscroll(WebElement element) {
+	    	//(//div[@class=\"ag-body-horizontal-scroll-viewport\"])[1]"
+	    	((JavascriptExecutor) element).executeScript("arguments[0].scrollLeft += 100;", element.findElement(By.xpath("(//div[@class=\\\"ag-body-horizontal-scroll-viewport\\\"])[2]")));
+	    }
+
+		
+	    }

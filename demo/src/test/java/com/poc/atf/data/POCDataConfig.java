@@ -25,6 +25,20 @@ public class POCDataConfig {
 		}
 		return loginData;
 	} 
+	
+	public IntransitConsignmentsData getIntransitConsignmentsData() {
+		IntransitConsignmentsData intransitConsignmentsData = null;
+		try {
+			parser = new JSONParser();
+			json = (JSONObject) parser.parse(new FileReader("src/main/resources/poc-data/IntransitConsignments.json"));
+			objectMapper = new ObjectMapper();
+			objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+			intransitConsignmentsData = objectMapper.readValue(json.toString(), IntransitConsignmentsData.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return intransitConsignmentsData;
+	} 
 }
 	
 	

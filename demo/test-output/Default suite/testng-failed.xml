@@ -7,9 +7,14 @@
         <methods>
           <include name="endReport"/>
           <include name="startReport"/>
+          <include name="vinsWithInGeoFenceTest"/>
           <include name="init"/>
+          <include name="summaryDashboardTest"/>
+          <include name="utilitiesTest"/>
           <include name="logIN"/>
           <include name="getResult"/>
+          <include name="inTransitTest"/>
+          <include name="vinLocationTest"/>
         </methods>
       </class> <!-- com.poc.atf.testscripts.LoginPageTestScripts -->
     </classes>
