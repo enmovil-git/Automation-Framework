@@ -1,6 +1,7 @@
 package com.poc.atf.testscripts;
 
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.poc.atf.config.BrowserDriver;
@@ -31,8 +32,6 @@ public class ActiveTestScripts extends BaseListener {
     AllScreenService allScreenService = null;
     ActiveScreenValidations activeScreenValidations = null;
     
-    
-    
     @BeforeClass
     public void init() {
     	loginData = new DBPLDataConfig().getLoginData();
@@ -56,7 +55,7 @@ public class ActiveTestScripts extends BaseListener {
     @Test(description="DBPL Login Test")
     public void activeScreenTest() {
     	
-    	activeScreenService.selectTypeFilters().inputTypeField(loginData.getTruckNo()).clickSubmitButton();
+    	activeScreenService.fromDateActiveScreen().selectTypeFilters().inputTypeField(loginData.getTruckNo()).clickSubmitButton();
     	activeScreenValidations.validateGridData(activeScreenService);
     	activeScreenService.rsFilters();
     	activeScreenService.clickConSlab();

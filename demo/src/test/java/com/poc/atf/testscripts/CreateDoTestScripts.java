@@ -1,5 +1,6 @@
 package com.poc.atf.testscripts;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -16,8 +17,8 @@ import util.BaseListener;
 
 public class CreateDoTestScripts extends BaseListener {
 	
-	LoginData loginData = null;
-	LoginService loginService = null;
+//	LoginData loginData = null;
+//	LoginService loginService = null;
 	CreateDOData createDOData = null;
     CreateDOService createDoService = null;
     ActiveScreenValidations activeScreenValidations = null;
@@ -25,8 +26,8 @@ public class CreateDoTestScripts extends BaseListener {
     
     @BeforeClass
     public void init() {
-    	loginData = new DBPLDataConfig().getLoginData();
-    	loginService = new LoginService();
+//    	loginData = new DBPLDataConfig().getLoginData();
+//    	loginService = new LoginService();
     	createDOData = new DBPLDataConfig().getCreateDOData();
     	createDoService = new CreateDOService();
     	activeScreenValidations = new ActiveScreenValidations();
@@ -35,15 +36,16 @@ public class CreateDoTestScripts extends BaseListener {
         
         logger = extent.createTest("DBPL: Create DO Screen");
         
-        BrowserDriver.getCurrentDriver().navigate().to(PropertyLoader.getDBPLUrl());
-        loginService.loginToDBPLApplication(loginData.getAdminLoginUser(), loginData.getAdminPassword());
+//        BrowserDriver.getCurrentDriver().navigate().to(PropertyLoader.getDBPLUrl());
+//        loginService.loginToDBPLApplication(loginData.getAdminLoginUser(), loginData.getAdminPassword());
     }
+    
     
     @Test(description="Create DO Script")
     
     public void CreateDOScreenTest() {
     	createDoService.Threedots().CreateDOname().AddDoButton().Coalmine().SelectCoalMine().
-    	addDoNumber(createDOData.getDoNumber()).fromDateCreateDo().toDateCreateDo().quantity(createDOData.getQuantity()).chooseFile().submitButton().gridCellData();
+    	addDoNumber(createDOData.getDoNumber()).fromDateCreateDo().toDateCreateDo().quantity(createDOData.getQuantity()).submitButton().gridCellData();
     	activeScreenValidations.createDODataValidation(createDoService);
     }
 }

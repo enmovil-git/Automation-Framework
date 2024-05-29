@@ -34,8 +34,7 @@ public class Utility {
 		// Define the update criteria (e.g., to update a document with "gc_waybill_no" field equal to 123)
 		Document filter = new Document("gc_waybill_no", gcBillNo);
 
-		// Define the update operation (e.g., to set a new value for the "fieldToUpdate"
-		// field)
+		// Define the update operation (e.g., to set a new value for the "fieldToUpdate" field)
 		Document update = new Document("$set", new Document("consignment_status", "Delivered"));
 
 		// Update the document

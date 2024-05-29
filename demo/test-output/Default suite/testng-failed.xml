@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.poc.atf.testscripts.CreateDoTestScripts">
+      <class name="com.poc.atf.testscripts.ActiveTestScripts">
         <methods>
+          <include name="activeScreenTest"/>
           <include name="endReport"/>
           <include name="startReport"/>
-          <include name="CreateDOScreenTest"/>
+          <include name="getResult"/>
           <include name="init"/>
         </methods>
-      </class> <!-- com.poc.atf.testscripts.CreateDoTestScripts -->
+      </class> <!-- com.poc.atf.testscripts.ActiveTestScripts -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

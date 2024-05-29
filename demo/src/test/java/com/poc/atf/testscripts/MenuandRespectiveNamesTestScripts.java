@@ -63,7 +63,26 @@ public class MenuandRespectiveNamesTestScripts extends BaseListener {
 		menuNamesandRespectiveScreenNamesServices.manageNameClick();
 		menuNamesandRespectiveScreenNamesServices.manageTruckValidation();
 		activeScreenValidations.validateManageTruckmenuandscreennames(menuNamesandRespectiveScreenNamesServices);
+		
+		menuNamesandRespectiveScreenNamesServices.manageCBR();
+		activeScreenValidations.validateManageCbrmenuandscreennames(menuNamesandRespectiveScreenNamesServices);
        
+		menuNamesandRespectiveScreenNamesServices.manageTransporter();
+		activeScreenValidations.validateManageTransmenuandscreennames(menuNamesandRespectiveScreenNamesServices);
+		
+		menuNamesandRespectiveScreenNamesServices.manageGeoFence();
+		activeScreenValidations.validateManageGFmenuandscreennames(menuNamesandRespectiveScreenNamesServices);
+		
+		menuNamesandRespectiveScreenNamesServices.manageCoalMine();
+		activeScreenValidations.validateManageCMmenuandscreennames(menuNamesandRespectiveScreenNamesServices);
+		
+		menuNamesandRespectiveScreenNamesServices.clickOnDashboard();
+		menuNamesandRespectiveScreenNamesServices.gpsWireDisDash();
+		activeScreenValidations.validateDashboardmenuandscreennames(menuNamesandRespectiveScreenNamesServices);
+		
+		menuNamesandRespectiveScreenNamesServices.clickOnTMS();
+		menuNamesandRespectiveScreenNamesServices.menuTMS();
+		activeScreenValidations.validateTicketMSmenuandscreennames(menuNamesandRespectiveScreenNamesServices);
 	}
 	
 

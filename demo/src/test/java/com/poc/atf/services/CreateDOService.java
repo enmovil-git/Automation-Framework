@@ -79,12 +79,12 @@ public class CreateDOService {
     	return this;
     }
     
-    public CreateDOService chooseFile(){
-        WebElement uploadDO =  BrowserDriver.getCurrentDriver().findElement(By.xpath("//input[@id='uploadFile']"));
-        String filepath = "C:\\Users\\Nagendra\\Desktop\\Sample-jpg-image-5mb.jpg";
-        uploadDO.sendKeys(filepath);
-        return this;
-      }
+//    public CreateDOService chooseFile(){
+//        WebElement uploadDO =  BrowserDriver.getCurrentDriver().findElement(By.xpath("//input[@id='uploadFile']"));
+//        String filepath = "C:\\Users\\Nagendra\\Desktop\\Sample-jpg-image-5mb.jpg";
+//        uploadDO.sendKeys(filepath);
+//        return this;
+//      }
     
     public CreateDOService submitButton() {
     	createDOObjects.getSubmitButton().click();

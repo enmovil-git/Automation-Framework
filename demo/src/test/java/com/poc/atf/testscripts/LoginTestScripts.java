@@ -60,17 +60,11 @@ public class LoginTestScripts extends BaseListener{
         loginService = new LoginService();
         InitializeViews.init(); 
         logger = extent.createTest("DBPL: Login Screen");
+        BrowserDriver.getCurrentDriver().navigate().to(PropertyLoader.getDBPLUrl());
     }
     
     @Test(description="DBPL Login Test")
-    public void loginTest() {
-//        if (dbplLoginData != null) {
-//            BrowserDriver.getCurrentDriver().navigate().to(PropertyLoader.getDBPLUrl());
-//            loginService.loginToDBPLApplication(dbplLoginData.getAdminLoginUser(), dbplLoginData.getAdminPassword());
-//        } else {
-//            // Handle case where dbplLoginData is not initialized
-//            // You can log an error or throw an exception here
-//            System.out.println("Login data is not initialized.");
-//        }
+    public void loginTest() {	
+        loginService.loginToDBPLApplication(dbplLoginData.getAdminLoginUser(), dbplLoginData.getAdminPassword());
     }   
 }

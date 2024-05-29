@@ -137,24 +137,31 @@ public class ActiveScreenValidations {
         softAssert.assertEquals(menuNamesandRespectiveScreenNamesServices.screenTruckText(), menuNamesandRespectiveScreenNamesServices.menuTrucktext(), "Screen and menu names are not equal");
 	}
 	
+	public void validateManageCbrmenuandscreennames(MenuNamesandRespectiveScreenNamesServices menuNamesandRespectiveScreenNamesServices) {
+        softAssert.assertEquals(menuNamesandRespectiveScreenNamesServices.screenCBRText(), menuNamesandRespectiveScreenNamesServices.menuCBRtext(), "Screen and menu names are not equal");
+	}
+	
+	public void validateManageTransmenuandscreennames(MenuNamesandRespectiveScreenNamesServices menuNamesandRespectiveScreenNamesServices) {
+        softAssert.assertEquals(menuNamesandRespectiveScreenNamesServices.screenTransText(), menuNamesandRespectiveScreenNamesServices.menuTranstext(), "Screen and menu names are not equal");
+	}
+	
+	public void validateManageGFmenuandscreennames(MenuNamesandRespectiveScreenNamesServices menuNamesandRespectiveScreenNamesServices) {
+        softAssert.assertEquals(menuNamesandRespectiveScreenNamesServices.screenGFText(), menuNamesandRespectiveScreenNamesServices.menuGFtext(), "Screen and menu names are not equal");
+	}
+	
+	public void validateManageCMmenuandscreennames(MenuNamesandRespectiveScreenNamesServices menuNamesandRespectiveScreenNamesServices) {
+        softAssert.assertEquals(menuNamesandRespectiveScreenNamesServices.screenCMText(), menuNamesandRespectiveScreenNamesServices.menuCMtext(), "Screen and menu names are not equal");
+	}
+	
+	public void validateDashboardmenuandscreennames(MenuNamesandRespectiveScreenNamesServices menuNamesandRespectiveScreenNamesServices) {
+        softAssert.assertEquals(menuNamesandRespectiveScreenNamesServices.screenGWDText(), menuNamesandRespectiveScreenNamesServices.menuGWDtext(), "Screen and menu names are not equal");
+	}
+	
+	public void validateTicketMSmenuandscreennames(MenuNamesandRespectiveScreenNamesServices menuNamesandRespectiveScreenNamesServices) {
+        softAssert.assertEquals(menuNamesandRespectiveScreenNamesServices.screenTMSText(), menuNamesandRespectiveScreenNamesServices.menuTMStext(), "Screen and menu names are not equal");
+	}
+	
 	public void tearDown() {
         softAssert.assertAll();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

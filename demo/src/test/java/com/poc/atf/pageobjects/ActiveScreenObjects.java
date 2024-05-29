@@ -5,6 +5,27 @@ import org.openqa.selenium.support.FindBy;
 
 public class ActiveScreenObjects {
 	
+	@FindBy(xpath = "//input[@name= 'startDate']")
+	private WebElement Fromdate;
+
+	@FindBy(xpath = "(//th[text()= 'May 2024'])[1]")
+	private WebElement clickOnMonthandYearHeader;
+	
+	@FindBy(xpath = "//th[text()='2024']")
+	private WebElement clickOnYearHeader;
+	
+	@FindBy(xpath = "//td[text()='2024']")
+	private WebElement SelectOnYear;
+	
+	@FindBy(xpath = "//td[text()='Jan']")
+	private WebElement SelectOnMonth;
+	
+	@FindBy(xpath = "(//td[text()='1'])[1]")
+	private WebElement SelectOnDate;
+	
+	@FindBy(xpath = "(//button[text()='Submit'])[2]")
+	private WebElement clickonsecondsubmitbutton;
+	
 	@FindBy(xpath = "//label[text()=\"Select Type   \"]//following-sibling::div")
 	private WebElement clickSelecttypefield;
 	
@@ -17,7 +38,7 @@ public class ActiveScreenObjects {
 	@FindBy(xpath = "(//button[text()='Submit'])[1]")
 	private WebElement clickonsubmitbutton;
 	
-	@FindBy(xpath = "//div[text()='OR23B6195']")
+	@FindBy(xpath = "//div[text()='CG10R1485']")
 	private WebElement gridtext;
 	
 	@FindBy(xpath = "//button[text()='Reset Filters']")
@@ -52,6 +73,64 @@ public class ActiveScreenObjects {
 	
 	@FindBy(xpath = "//span[text()='Rows']/following-sibling::span[@ref='eValue']")
 	private WebElement DeviationgridSlabCountText;
+	
+	
+
+	public WebElement getFromdate() {
+		return Fromdate;
+	}
+
+	public void setFromdate(WebElement fromdate) {
+		Fromdate = fromdate;
+	}
+
+	public WebElement getClickOnMonthandYearHeader() {
+		return clickOnMonthandYearHeader;
+	}
+
+	public void setClickOnMonthandYearHeader(WebElement clickOnMonthandYearHeader) {
+		this.clickOnMonthandYearHeader = clickOnMonthandYearHeader;
+	}
+
+	public WebElement getClickOnYearHeader() {
+		return clickOnYearHeader;
+	}
+
+	public void setClickOnYearHeader(WebElement clickOnYearHeader) {
+		this.clickOnYearHeader = clickOnYearHeader;
+	}
+
+	public WebElement getSelectOnYear() {
+		return SelectOnYear;
+	}
+
+	public void setSelectOnYear(WebElement selectOnYear) {
+		SelectOnYear = selectOnYear;
+	}
+
+	public WebElement getSelectOnMonth() {
+		return SelectOnMonth;
+	}
+
+	public void setSelectOnMonth(WebElement selectOnMonth) {
+		SelectOnMonth = selectOnMonth;
+	}
+
+	public WebElement getSelectOnDate() {
+		return SelectOnDate;
+	}
+
+	public void setSelectOnDate(WebElement selectOnDate) {
+		SelectOnDate = selectOnDate;
+	}
+
+	public WebElement getClickonsecondsubmitbutton() {
+		return clickonsecondsubmitbutton;
+	}
+
+	public void setClickonsecondsubmitbutton(WebElement clickonsecondsubmitbutton) {
+		this.clickonsecondsubmitbutton = clickonsecondsubmitbutton;
+	}
 
 	public WebElement getClickSelecttypefield() {
 		return clickSelecttypefield;

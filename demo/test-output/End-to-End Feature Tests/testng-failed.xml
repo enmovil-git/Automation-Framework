@@ -10,8 +10,18 @@
           <include name="init"/>
           <include name="activeScreenTest"/>
           <include name="tearDown"/>
+          <include name="getResult"/>
         </methods>
       </class> <!-- com.poc.atf.testscripts.MenuandRespectiveNamesTestScripts -->
+      <class name="com.poc.atf.testscripts.ActiveTestScripts">
+        <methods>
+          <include name="activeScreenTest"/>
+          <include name="endReport"/>
+          <include name="startReport"/>
+          <include name="getResult"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- com.poc.atf.testscripts.ActiveTestScripts -->
     </classes>
   </test> <!-- Login and Consignmnet tests(failed) -->
 </suite> <!-- Failed suite [End-to-End Feature Tests] -->

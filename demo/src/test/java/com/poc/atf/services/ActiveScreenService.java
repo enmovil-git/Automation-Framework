@@ -18,6 +18,17 @@ public class ActiveScreenService {
     	activeScreenObjects = PageFactory.initElements(BrowserDriver.getCurrentDriver(), ActiveScreenObjects.class);
     }
     
+    public ActiveScreenService fromDateActiveScreen() {
+    	activeScreenObjects.getFromdate().click();
+    	activeScreenObjects.getClickOnMonthandYearHeader().click();
+    	activeScreenObjects.getClickOnYearHeader().click();
+    	activeScreenObjects.getSelectOnYear().click();
+    	activeScreenObjects.getSelectOnMonth().click();
+    	activeScreenObjects.getSelectOnDate().click();
+    	activeScreenObjects.getClickonsecondsubmitbutton().click();
+    	return this;
+    }
+    
     public ActiveScreenService selectTypeFilters() {
     	BrowserDriver.wait(5);
     	activeScreenObjects.getClickSelecttypefield().click();
